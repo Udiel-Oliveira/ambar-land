@@ -1,0 +1,1071 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+    /*Box model stuff*/
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    /*Typography stuff*/
+    font-family: "Audiowide", serif;
+    /*Miscellaneous*/
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+#loading-screen {
+    /*Display stuff*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*Positioning stuff*/
+    position: fixed;
+    z-index: 9999;
+    /*Box model stuff*/
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    /*Typography stuff*/
+    color: #fff;
+    /*Miscellaneous*/
+    gap: 2rem;
+}
+
+#loading-screen img {
+    /*Box model stuff*/
+    width: 5%;
+}
+
+.blurLoad {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    z-index: 9999;
+    overflow: hidden;
+    backdrop-filter: blur(300px);
+    align-items: center;
+}
+
+.backgound_blur {
+    /*Display stuff*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*Positioning stuff*/
+    position: absolute;
+    z-index: -1000;
+    /*Box model stuff*/
+    width: 100%;
+    height: 280%;
+}
+
+.blur {
+    /*Display stuff*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*Positioning stuff*/
+    position: relative;
+    z-index: -1000;
+    /*Box model stuff*/
+    width: 100%;
+    height: 100%;
+    background-color: #00000030;
+    /*Miscellaneous*/
+    backdrop-filter: blur(200px);
+}
+
+.cr1 {
+    /*Display stuff*/
+    content: "";
+    /*Positioning stuff*/
+    position: absolute;
+    right: -5%;
+    top: 70%;
+    /*Box model stuff*/
+    width: 100px;
+    height: 100px;
+    border: 80px solid #CE7B1D;
+    border-radius: 100%;
+    background-color: #CE7B1D;
+    animation: moveCircle 10s linear infinite;
+    z-index: -1000;
+    /*Manipulations stuff*/
+    opacity: 0.6;
+}
+
+.cr2 {
+    /*Display stuff*/
+    content: "";
+    /*Positioning stuff*/
+    position: absolute;
+    right: 80%;
+    bottom: 80%;
+    /*Box model stuff*/
+    width: 200px;
+    z-index: -1000;
+    height: 200px;
+    border: 80px solid #ffffff55;
+    border-radius: 100%;
+    background: linear-gradient(to right, #fff, #0000003b);
+    animation: moveCircle 10s linear infinite;
+    /*Manipulations stuff*/
+    opacity: 0.6;
+}
+
+.cr3 {
+    /*Display stuff*/
+    content: "";
+    /*Positioning stuff*/
+    position: absolute;
+    right: 80%;
+    top: 160%;
+    /*Box model stuff*/
+    width: 200px;
+    z-index: -1000;
+    height: 200px;
+    border: 80px solid #ffffff55;
+    border-radius: 100%;
+    background: linear-gradient(to right, #fff, #0000003b);
+    animation: moveCircle 10s linear infinite;
+    /*Manipulations stuff*/
+    opacity: 0.6;
+}
+
+.container {
+    /*Display stuff*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*Positioning stuff*/
+    position: relative;
+    /*Typography stuff*/
+    color: white;
+}
+/*<============== Navegação ==============>*/
+header {
+    /*Display stuff*/
+    display: flex;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    /*Positioning stuff*/
+    position: fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    /*Box model stuff*/
+    padding: 10px 40px;
+    background-color: transparent;
+    /*Miscellaneous*/
+    backdrop-filter: blur(10px);
+}
+
+.head_left {
+    /*Display stuff*/
+    display: flex;
+    align-items: center;
+}
+
+.head_left img {
+    /*Box model stuff*/
+    width: 35px;
+    height: 35px;
+    margin-right: 20px;
+    /*Manipulations stuff*/
+    filter: grayscale(100%);
+    transition: all 0.5s ease-in-out;
+}
+
+.head_left img:hover {
+    /*Manipulations stuff*/
+    filter: grayscale(0%);
+}
+
+.logotipo {
+    /*Display stuff*/
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    /*Box model stuff*/
+    padding-left: 20px;
+    border-left: 2px solid #fff;
+    /*Typography stuff*/
+    text-transform: uppercase;
+}
+
+.logotipo img {
+    /*Box model stuff*/
+    width: 25px;
+    height: 25px;
+}
+
+.logotipo span {
+    /*Box model stuff*/
+    margin-left: -10px;
+    /*Typography stuff*/
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.head_right a {
+    /*Display stuff*/
+    display: flex;
+    /*Typography stuff*/
+    text-transform: uppercase;
+    /*Miscellaneous*/
+    cursor: pointer;
+    gap: 0.5rem;
+}
+
+.sec_default {
+    /*Display stuff*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*Positioning stuff*/
+    position: relative;
+    /*Box model stuff*/
+    width: 100%;
+    height: 100vh;
+    /*Miscellaneous*/
+}
+
+/*<============== Seção Inicial ==============>*/
+.title {
+    /*Positioning stuff*/
+    z-index: 1;
+    /*Box model stuff*/
+    width: 100%;
+    /*Typography stuff*/
+    text-align: center;
+}
+
+.made_by {
+    /*Display stuff*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*Typography stuff*/
+    font-family: "Inter", sans-serif;
+    /*Manipulations stuff*/
+    animation: fadeIn 3s ease-in-out forwards;
+    animation-delay: 7s;
+    opacity: 0;
+    /*Miscellaneous*/
+    gap: 8px;
+}
+
+.made_by img {
+    /*Box model stuff*/
+    width: 1.5%;
+}
+
+.made_by span {
+    /*Typography stuff*/
+    font-family: "Audiowide", sans-serif;
+    text-transform: uppercase;
+}
+
+.iconeA img {
+    /*Positioning stuff*/
+    position: relative;
+    z-index: -10;
+    /*Box model stuff*/
+    width: 30%;
+    /*Manipulations stuff*/
+    filter: brightness(50%);
+    opacity: 0;
+    animation: fadeIn 3s ease-in-out forwards;
+    animation-delay: 3s;
+}
+
+.text {
+    /*Positioning stuff*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    /*Manipulations stuff*/
+    transform: translate(-50%, -50%);
+}
+
+.text h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    opacity: 0;
+    text-align: center;
+    animation: fadeIn 3s ease-in-out forwards;
+    animation-delay: 5s;
+}
+
+/*<============== Seção Secundária ==============>*/
+
+.retangulo {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 20px;
+    font-family: "Inter", sans-serif;
+    animation: appaer linear;
+    animation-timeline: view();
+    animation-range: entry 0;
+
+    /* Cor de fundo e gradiente na borda */
+    background:
+        linear-gradient(black, black) padding-box,
+        /* Fundo preto */
+        linear-gradient(125deg, #fff, #000, #0000, #0000, #fff) border-box;
+    /* Gradiente na borda */
+    border: 2px solid transparent;
+    /* Borda transparente para exibir gradiente */
+    color: #fff;
+    /* Cor do texto */
+    backdrop-filter: blur(105px);
+}
+
+.retangulo span {
+    font-family: "Audiowide", sans-serif;
+    text-transform: uppercase;
+    font-size: 4rem;
+}
+
+/*<============== Seção Pity ==============>*/
+
+.pity_sec {
+    width: 100%;
+    height: 100%;
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    gap: 2rem;
+}
+
+.logoBack img:nth-child(1) {
+    position: absolute;
+    width: 40%;
+    right: 80%;
+    top: 10%;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.logoBack img:nth-child(2) {
+    position: absolute;
+    width: 40%;
+    left: 80%;
+    top: 30%;
+    transform: scale(-1, -1);
+    z-index: -1;
+    opacity: 0.5;
+}
+.pity_sec h1 {
+    text-align: center;
+    font-size: 2rem;
+    width: 50%;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: "Inter", sans-serif;
+}
+.textContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.textContainer span {
+    background: linear-gradient(90deg, #E0922E 0%, #7A5019 28%, #97621F 48%, #BB7A26 72%, #E0922E 97%);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    /* Clip para texto */
+    color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
+}
+.image_box {
+    width: 360px;
+    height: 510px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+.image_box video {
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    object-fit: cover;
+}
+
+@keyframes animate-gradient {
+    to {
+        background-position: 200%;
+    }
+
+}
+
+/* <== Estilo da barra de controles ==> */
+.controls {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 3%;
+    align-items: center;
+    background-color: #121212;
+    /* Cor de fundo */
+    color: white;
+    /* Cor do texto */
+    border-radius: 25px;
+    /* Ajuste para um visual mais refinado */
+    opacity: 0.2;
+    /* Maior visibilidade */
+}
+
+/* <== Botão Pause/Play e telaCheia ==> */
+
+.btn_control{
+    color: white;
+    /* Cor do texto */
+    background-color: transparent;
+    /* Fundo transparente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    /* Dimensão mais usável */
+    height: 50px;
+    border-radius: 50%;
+    /* Tornar o botão circular */
+    font-size: 18px;
+    /* Ajuste de fonte */
+    z-index: 1;
+    /* Garante que fique no topo */
+    opacity: 0.9;
+    /* Visível, mas com leve transparência */
+    border: none;
+    /* Remove borda */
+    cursor: pointer;
+    /* Cursor de interação */
+}
+
+.btn_control:hover {
+    opacity: 1;
+    /* Totalmente visível ao passar o mouse */
+    background-color: #626262;
+    /* Destaque ao interagir */
+}
+
+/* <== Animação de vídeo ==> */
+.autoVideoFull {
+    animation: videoFull both;
+    animation-timeline: view(70% 70%);
+    animation-range: entry 0% cover;
+}
+
+@keyframes videoFull {
+    to {
+        width: 100%;
+        height: 100vh;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+}
+/* <============== Seção de Diferenciais ==============> */
+.diferencial_sec{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    color: white;
+}
+.dif_title{
+    width: 100%;
+    display: flex;
+    padding-left: 5rem;
+    justify-content: flex-start;
+    align-items: center;
+}
+.dif_title::before{
+    content: "";
+    width: 50px;
+    height: 0.5rem;
+    background-color: #CE7B1D;
+    margin-right: 1rem;
+}
+.dif_title h1{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    opacity: 1;
+    text-align: center;
+}
+.dif_title span{
+    font-size: 1rem;
+    font-family: "Inter", sans-serif;
+    color: #9B9B9B;
+}
+/* <== CMD ==> */
+.cmd{
+    width: 80%;
+    height: 90vh;
+    background-color: transparent;
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "input output";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 10fr;
+    border: 1px solid #fff;
+    border-radius: 20px;
+}
+.cmdHeader{
+    grid-area: header; /* Área do cabeçalho */
+    background-color: transparent;
+    border-radius: 20px 20px 0 0;
+    padding: 0px 20px;
+    border-bottom: 2px solid #fff;
+    display: flex;
+    justify-content: space-between;
+}
+.window_controls,.cmdSubtitle{
+    display: flex;
+    gap: 1rem;
+    height: 100%;
+    align-items: center;
+}
+.window_control{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #FF5F56;
+    transition: background-color 0.2s ease-in-out;
+}
+.window_control:nth-child(1){
+    background-color: transparent;
+    border: 2px solid #FFBD2E;
+}
+.window_control:nth-child(2){
+    background-color: transparent;
+    border: 2px solid #27C93F;
+}
+.window_control:nth-child(3){
+    background-color: transparent;
+    border: 2px solid #FF5F56;
+}
+.window_control:nth-child(1):hover{
+    background-color: #FFBD2E;
+}
+.window_control:nth-child(2):hover{
+    background-color: #27C93F;
+}
+.window_control:nth-child(3):hover{
+    background-color: #FF5F56;
+}
+
+.cmdSubtitle .window_control{
+    background-color: transparent;
+    border: none;
+}
+
+.cmdTitle{
+    display: flex;
+    align-items: center;
+}
+.cmdTitle h1{
+    font-size: 1.5rem;
+    font-family: "Inter", sans-serif;
+}
+
+
+
+.cmdInput{
+    grid-area: input; /* Área de entrada */
+    background-color: transparent;
+    border-radius: 0px 0px 0px 20px;
+    border-right: 1px solid #fff;
+}
+.cmdOutput{
+    grid-area: output; /* Área de saída */
+    background-color: transparent;
+    border-radius: 0px 0px 20px 0px;
+}
+.outputTitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 2rem;
+    height: 10%;
+    width: 80%;
+    border-bottom: 1px solid #fff;
+}
+
+/* <============== Seção de Aprenda ==============> */
+.learn_sec{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: white;
+}
+.learn_content{
+    width: 90%;
+    height: 100%;
+    display: flex;
+}
+.learnIt1{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5rem;
+
+}
+.categories{
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.category{
+    background-color: #2B2B2B;
+    padding: 10px 20px;
+    border-radius: 7px;
+    width: fit-content;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.category:hover{
+    background-color: #CE7B1D;
+}
+.learn_text p{
+    font-size: 20px;
+}
+.learn_btn{
+    display: flex;
+    width: 100%;
+}
+.learn_btn button{
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: "Audiowide", sans-serif;
+    color: #fff;
+    opacity: 1;
+    /* Cor de fundo e gradiente na borda */
+    background:
+        linear-gradient(black, black) padding-box,
+        /* Fundo preto */
+        linear-gradient(150deg, #fff, #000, #0000, #0000, #fff) border-box;
+    /* Gradiente na borda */
+    border: 2px solid transparent;
+    /* Borda transparente para exibir gradiente */
+    /* Cor do texto */
+    padding: 15px 50px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+.learn_btn button:hover {
+    background: #CE7B1D;
+}
+
+.learnIt2{
+    display: flex;
+    flex: 1;
+    border: 1px solid #CE7B1D;
+}
+
+
+/* <============== Seção de Dowload ==============> */
+
+.download_sec {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    gap: 2rem;
+    margin-top: 100px;
+}
+
+.down_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    color: white;
+    margin-top: 100px;
+}
+
+.down_text {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.down_text h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    opacity: 1;
+    text-align: center;
+
+}
+
+.down_text p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: "Inter", sans-serif;
+    color: #fff;
+    opacity: 1;
+    width: 80%;
+    text-align: center;
+
+}
+
+.dowload_btn {
+    text-decoration: none;
+    background-color: transparent;
+    padding: 5px 5px;
+    border: 1px solid #CE7B1D;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.dowload_btn button {
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: "Audiowide", sans-serif;
+    color: #fff;
+    opacity: 1;
+    background-color: #CE7B1D;
+    border: none;
+    padding: 10px 50px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+.dowload_btn button:hover {
+    background: #fff;
+    color: #000;
+}
+.dowload_btn:hover {
+    border-color: #fff;
+}
+/* <=========== Footer ===========>*/
+
+
+.footer {
+    background-color: #000; /* Fundo preto */
+    color: #fff; /* Texto branco */
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    padding: 0px 10rem;
+}
+
+.logo-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.logo-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    width: 60%;
+}
+
+.nav-section ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 3rem;
+}
+
+.nav-section a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.nav-section a:hover {
+    color: #ddd; /* Muda para cinza claro ao passar o mouse */
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 12px;
+    border-top: 1px solid #333;
+    padding: 10px 10rem;
+    font-size: 15px;
+}
+
+.footer-bottom a {
+    color: #CE7B1D; /* Botão "Aceitar" em verde */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-bottom a:hover {
+    color: #ea9432; /* Verde mais escuro ao passar o mouse */
+}
+
+
+
+/* <=========== Animação de texto ===========>*/
+
+.background-text {
+    /*Positioning stuff*/
+    position: absolute;
+    left: 0;
+    top: 0;
+    /*Box model stuff*/
+    width: 100%;
+    height: 100%;
+    /*Miscellaneous*/
+    z-index: -1;
+    pointer-events: none;
+    /* Para não interferir no clique */
+}
+
+.textBack {
+    /*Positioning stuff*/
+    position: absolute;
+    /*Box model stuff*/
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.5),
+            /* Branco com opacidade de 50% */
+            rgba(0, 0, 0, 0.2)
+            /* Preto com opacidade de 10% */
+        );
+    /*Typography stuff*/
+    font-family: "Inter", sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    /*Manipulations stuff*/
+    transform: translateX(-100%);
+    animation: moveBackground 10s linear infinite;
+    opacity: 0.5;
+    /*Miscellaneous*/
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+}
+
+/* Animação ajustada */
+@keyframes moveBackground {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+        /* Começa fora da tela pela direita */
+    }
+
+    to {
+        transform: translateX(-100%);
+        /* Sai completamente pela esquerda */
+        opacity: 1;
+    }
+}
+
+/* Configurações individuais para tempos diferentes */
+.textBack:nth-child(1) {
+    /*Positioning stuff*/
+    top: 10%;
+    /*Manipulations stuff*/
+    animation-delay: 0s;
+    animation-duration: 8s;
+}
+
+.textBack:nth-child(2) {
+    /*Positioning stuff*/
+    top: 15%;
+    /*Manipulations stuff*/
+    animation-delay: 3s;
+    animation-duration: 8s;
+}
+
+.textBack:nth-child(3) {
+    /*Positioning stuff*/
+    top: 35%;
+    /*Manipulations stuff*/
+    animation-delay: 4s;
+    animation-duration: 12s;
+}
+
+.textBack:nth-child(4) {
+    /*Positioning stuff*/
+    top: 45%;
+    /*Manipulations stuff*/
+    animation-delay: 8s;
+    animation-duration: 12s;
+}
+
+.textBack:nth-child(5) {
+    /*Positioning stuff*/
+    top: 55%;
+    /*Manipulations stuff*/
+    animation-delay: 9s;
+    animation-duration: 16s;
+}
+
+.textBack:nth-child(6) {
+    /*Positioning stuff*/
+    top: 65%;
+    /*Manipulations stuff*/
+    animation-delay: 15s;
+    animation-duration: 16s;
+}
+
+
+.textBack:nth-child(7) {
+    /*Positioning stuff*/
+    top: 70%;
+    /*Manipulations stuff*/
+    animation-delay: 5s;
+    animation-duration: 14s;
+}
+
+.textBack:nth-child(8) {
+    /*Positioning stuff*/
+    top: 70%;
+    /*Manipulations stuff*/
+    animation-delay: 10s;
+    animation-duration: 14s;
+}
+
+/* <== Animacao de blur ==> */
+
+.autoBlur {
+    animation: blurAnimation linear both;
+    animation-timeline: view();
+}
+/* <========== Animações ==========> */
+
+@keyframes blurAnimation {
+    0% {
+        filter: blur(40px);
+    }
+
+    40%,
+    60% {
+        filter: blur(0px);
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    100% {
+        filter: blur(40px);
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+
+}
+
+@keyframes moveText {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-145%);
+    }
+}
+
+@keyframes moveCircle {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes appaer {
+    0% {
+        opacity: 0;
+        transform: scale(0.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#content {
+    /*Display stuff*/
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .text h1 {
+        font-size: 3rem;
+    }
+
+    .image_box {
+        width: 90%;
+        height: auto;
+    }
+
+    .made_by img {
+        width: 5%;
+    }
+}

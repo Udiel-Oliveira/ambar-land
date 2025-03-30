@@ -1,0 +1,918 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+    /*Box model stuff*/
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    /*Typography stuff*/
+    font-family: "Audiowide", serif;
+    /*Miscellaneous*/
+    overflow-x: hidden;
+}
+.blurLoad{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    z-index: 9999;
+    overflow: hidden;
+    backdrop-filter: blur(300px);
+    align-items: center;
+}
+
+.backgound_blur {
+    /*Display stuff*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*Positioning stuff*/
+    position: absolute;
+    z-index: -1000;
+    /*Box model stuff*/
+    width: 100%;
+    height: 280%;
+}
+
+.blur {
+    /*Display stuff*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*Positioning stuff*/
+    position: relative;
+    z-index: -1000;
+    /*Box model stuff*/
+    width: 100%;
+    height: 100%;
+    background-color: #00000030;
+    /*Miscellaneous*/
+    backdrop-filter: blur(200px);
+}
+
+.cr1 {
+    /*Display stuff*/
+    content: "";
+    /*Positioning stuff*/
+    position: absolute;
+    right: -5%;
+    top: 70%;
+    /*Box model stuff*/
+    width: 100px;
+    height: 100px;
+    border: 80px solid #CE7B1D;
+    border-radius: 100%;
+    background-color: #CE7B1D;
+    animation: moveCircle 10s linear infinite;
+    z-index: -1000;
+    /*Manipulations stuff*/
+    opacity: 0.6;
+}
+
+.cr2 {
+    /*Display stuff*/
+    content: "";
+    /*Positioning stuff*/
+    position: absolute;
+    right: 80%;
+    bottom: 80%;
+    /*Box model stuff*/
+    width: 200px;
+    z-index: -1000;
+    height: 200px;
+    border: 80px solid #ffffff55;
+    border-radius: 100%;
+    background: linear-gradient(to right, #fff, #0000003b);
+    animation: moveCircle 10s linear infinite;
+    /*Manipulations stuff*/
+    opacity: 0.6;
+}
+.cr3{
+     /*Display stuff*/
+     content: "";
+     /*Positioning stuff*/
+     position: absolute;
+     right: 80%;
+     top: 160%;
+     /*Box model stuff*/
+     width: 200px;
+     z-index: -1000;
+     height: 200px;
+     border: 80px solid #ffffff55;
+     border-radius: 100%;
+     background: linear-gradient(to right, #fff, #0000003b);
+     animation: moveCircle 10s linear infinite;
+     /*Manipulations stuff*/
+     opacity: 0.6;
+}
+.container {
+    /*Display stuff*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*Positioning stuff*/
+    position: relative;
+    /*Typography stuff*/
+    color: white;
+}
+
+header {
+    /*Display stuff*/
+    display: flex;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    /*Positioning stuff*/
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    /*Box model stuff*/
+    padding: 10px 40px;
+    background-color: transparent;
+    /*Miscellaneous*/
+    backdrop-filter: blur(10px);
+}
+
+.head_left {
+    /*Display stuff*/
+    display: flex;
+    align-items: center;
+}
+
+.head_left img {
+    /*Box model stuff*/
+    width: 35px;
+    height: 35px;
+    margin-right: 20px;
+    /*Manipulations stuff*/
+    filter: grayscale(100%);
+    transition: all 0.5s ease-in-out;
+}
+
+.head_left img:hover {
+    /*Manipulations stuff*/
+    filter: grayscale(0%);
+}
+
+.logotipo {
+    /*Display stuff*/
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    /*Box model stuff*/
+    padding-left: 20px;
+    border-left: 2px solid #fff;
+    /*Typography stuff*/
+    text-transform: uppercase;
+}
+
+.logotipo img {
+    /*Box model stuff*/
+    width: 25px;
+    height: 25px;
+}
+
+.logotipo span {
+    /*Box model stuff*/
+    margin-left: -10px;
+    /*Typography stuff*/
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.head_right a {
+    /*Display stuff*/
+    display: flex;
+    /*Typography stuff*/
+    text-transform: uppercase;
+    /*Miscellaneous*/
+    cursor: pointer;
+    gap: 0.5rem;
+}
+
+.sec_default{
+    /*Display stuff*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*Positioning stuff*/
+    position: relative;
+    /*Box model stuff*/
+    width: 100%;
+    height: 100vh;
+    /*Miscellaneous*/
+}
+
+
+.title {
+    /*Positioning stuff*/
+    z-index: 1;
+    /*Box model stuff*/
+    width: 100%;
+    /*Typography stuff*/
+    text-align: center;
+}
+
+.made_by {
+    /*Display stuff*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*Typography stuff*/
+    font-family: "Inter", sans-serif;
+    /*Manipulations stuff*/
+    animation: fadeIn 3s ease-in-out forwards;
+    animation-delay: 7s;
+    opacity: 0;
+    /*Miscellaneous*/
+    gap: 8px;
+}
+
+.made_by img {
+    /*Box model stuff*/
+    width: 1.5%;
+}
+
+.made_by span {
+    /*Typography stuff*/
+    font-family: "Audiowide", sans-serif;
+    text-transform: uppercase;
+}
+
+.iconeA img{
+    /*Positioning stuff*/
+    position: relative;
+    z-index: -10;
+    /*Box model stuff*/
+    width: 30%;
+    /*Manipulations stuff*/
+    filter: brightness(50%);
+    opacity: 0;
+    animation: fadeIn 3s ease-in-out forwards;
+    animation-delay: 3s;
+}
+.text{
+    /*Positioning stuff*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    /*Manipulations stuff*/
+    transform: translate(-50%, -50%);
+}
+.text h1{
+    font-size: 5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    opacity: 0;
+    text-align: center;
+    animation: fadeIn 3s ease-in-out forwards;
+    animation-delay: 5s;
+}
+/* secao 2 */
+
+.retangulo {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 20px;
+    font-family: "Inter", sans-serif;
+    animation: appaer linear;
+    animation-timeline: view();
+    animation-range: entry 0;
+    
+    /* Cor de fundo e gradiente na borda */
+    background: 
+    linear-gradient(black, black) padding-box, /* Fundo preto */
+    linear-gradient(125deg, #fff, #000, #0000,#0000, #fff) border-box; /* Gradiente na borda */
+    border: 2px solid transparent; /* Borda transparente para exibir gradiente */
+    color: #fff; /* Cor do texto */
+    backdrop-filter: blur(105px);
+}
+.retangulo span{
+    font-family: "Audiowide", sans-serif;
+    text-transform: uppercase;
+    font-size: 4rem;
+}
+
+/* Seção do Pity */
+.pity_sec{
+    width: 100%;
+    height: 100%;
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    gap: 2rem;
+}
+.logoBack img:nth-child(1){
+    position: absolute;
+    width: 40%;
+    right: 80%;
+    top:55%;
+    z-index: -1;
+    opacity: 0.5;
+}
+.logoBack img:nth-child(2){
+    position: absolute;
+    width: 40%;
+    left: 80%;
+    top:65%;
+    transform: scale(-1, -1);
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.image_box{
+    width: 360px;
+    height: 510px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+}
+.image_box video{
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    object-fit: cover;
+}
+.pity_sec h1{
+    text-align: center;
+    font-size: 2rem;
+    width: 50%;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: "Inter", sans-serif;
+}
+.textContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pity_sec span{
+    background-size: 200%;
+    background-clip: text;
+    background: linear-gradient(90deg, #E0922E 0%, #7A5019 28%, #97621F 48%, #BB7A26 72%, #E0922E 97%);
+    -webkit-background-clip: text; /* Clip para texto */
+    color: transparent; 
+    animation: animate-gradient 2.5s linear infinite;
+}
+
+@keyframes animate-gradient {
+    to{
+        background-position: 200%;
+    }
+    
+}
+
+/* Estilo da barra de controles */
+.controls {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121212; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border-radius: 25px; /* Ajuste para um visual mais refinado */
+    opacity: 0.2; /* Maior visibilidade */
+}
+
+/* Botão Pause/Play */
+#botao-pause-play {
+    color: white; /* Cor do texto */
+    background-color: transparent; /* Fundo transparente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Dimensão mais usável */
+    height: 50px;
+    border-radius: 50%; /* Tornar o botão circular */
+    font-size: 18px; /* Ajuste de fonte */
+    z-index: 1; /* Garante que fique no topo */
+    opacity: 0.9; /* Visível, mas com leve transparência */
+    border: none; /* Remove borda */
+    cursor: pointer; /* Cursor de interação */
+}
+
+#botao-pause-play:hover {
+    opacity: 1; /* Totalmente visível ao passar o mouse */
+    background-color: #626262; /* Destaque ao interagir */
+}
+
+/* Botão Tela Cheia */
+#botao-tela-cheia {
+    color: white;
+    background-color: transparent; /* Fundo transparente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Tamanho consistente com o botão de pause/play */
+    height: 50px;
+    border-radius: 50%; /* Formato circular */
+    font-size: 18px; /* Ajuste de fonte */
+    border: none;
+    cursor: pointer;
+}
+
+#botao-tela-cheia:hover {
+    background-color: #626262; /* Cor de destaque ao passar o mouse */
+    opacity: 1;
+}
+
+
+
+/* Animacao de blur */
+.autoBlur{
+    animation: blurAnimation linear both;
+    animation-timeline: view() ;
+}
+@keyframes blurAnimation {
+    0% {
+        filter: blur(40px);
+    }
+    40%, 60% {
+        filter: blur(0px);
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    100%{
+        filter: blur(40px);
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+    
+}
+/* Animação de vídeo */
+.autoVideoFull{
+    animation: videoFull both;
+    animation-timeline: view(70% 65%);
+    animation-range: entry 0% cover;
+}
+@keyframes videoFull {
+    to{
+        width: 100%;
+        height: 100vh;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }   
+}
+
+
+.video-16-9 {
+  width: 100%; /* ou um valor fixo como 600px */
+  aspect-ratio: 16 / 9; /* Define a proporção diretamente (suportado por navegadores modernos) */
+  border-radius: 10px;      /* Opcional: cantos arredondados */
+}
+
+
+/* secao 5 */
+.download_sec{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    gap: 2rem;
+    margin-top: 100px;
+}
+.down_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    color: white;
+    margin-top: 100px;
+}
+.down_text{
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.down_text h1{
+    font-size: 5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    opacity: 1;
+    text-align: center;
+
+}
+.down_text p{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: "Inter", sans-serif;
+    color: #fff;
+    opacity: 1;
+    width: 80%;
+    text-align: center;
+
+}
+.dowload_btn{
+    text-decoration: none;
+    background-color: transparent;
+    padding: 5px 5px;
+    border: 1px solid #CE7B1D;
+    border-radius: 10px;
+}
+.dowload_btn button{
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: "Audiowide", sans-serif;
+    color: #fff;
+    opacity: 1;
+    background-color: #CE7B1D;
+    border: none;
+    padding: 10px 50px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+
+
+
+
+
+
+/* Animação de texto */
+.background-text {
+    /*Positioning stuff*/
+    position: absolute;
+    left: 0;
+    top: 0;
+    /*Box model stuff*/
+    width: 100%;
+    height: 100%;
+    /*Miscellaneous*/
+    pointer-events: none;
+    /* Para não interferir no clique */
+}
+
+
+.textBack {
+    /*Positioning stuff*/
+    position: absolute;
+    /*Box model stuff*/
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.5),
+            /* Branco com opacidade de 50% */
+            rgba(0, 0, 0, 0.2)
+            /* Preto com opacidade de 10% */
+        );
+    /*Typography stuff*/
+    font-family: "Inter", sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    /*Manipulations stuff*/
+    transform: translateX(-100%);
+    animation: moveBackground 10s linear infinite;
+    opacity: 0.5;
+    /*Miscellaneous*/
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+}
+
+/* Animação ajustada */
+@keyframes moveBackground {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+        /* Começa fora da tela pela direita */
+    }
+
+    to {
+        transform: translateX(-100%);
+        /* Sai completamente pela esquerda */
+        opacity: 1;
+    }
+}
+
+/* Configurações individuais para tempos diferentes */
+.textBack:nth-child(1) {
+    /*Positioning stuff*/
+    top: 10%;
+    /*Manipulations stuff*/
+    animation-delay: 0s;
+    animation-duration: 8s;
+}
+
+.textBack:nth-child(2) {
+    /*Positioning stuff*/
+    top: 15%;
+    /*Manipulations stuff*/
+    animation-delay: 3s;
+    animation-duration: 8s;
+}
+
+
+
+.textBack:nth-child(3) {
+    /*Positioning stuff*/
+    top: 35%;
+    /*Manipulations stuff*/
+    animation-delay: 4s;
+    animation-duration: 12s;
+}
+
+.textBack:nth-child(4) {
+    /*Positioning stuff*/
+    top: 45%;
+    /*Manipulations stuff*/
+    animation-delay: 8s;
+    animation-duration: 12s;
+}
+
+
+
+
+.textBack:nth-child(5) {
+    /*Positioning stuff*/
+    top: 55%;
+    /*Manipulations stuff*/
+    animation-delay: 9s;
+    animation-duration: 16s;
+}
+
+.textBack:nth-child(6) {
+    /*Positioning stuff*/
+    top: 65%;
+    /*Manipulations stuff*/
+    animation-delay: 15s;
+    animation-duration: 16s;
+}
+
+
+.textBack:nth-child(7) {
+    /*Positioning stuff*/
+    top: 70%;
+    /*Manipulations stuff*/
+    animation-delay: 5s;
+    animation-duration: 14s;
+}
+
+.textBack:nth-child(8) {
+    /*Positioning stuff*/
+    top: 70%;
+    /*Manipulations stuff*/
+    animation-delay: 10s;
+    animation-duration: 14s;
+}
+
+@keyframes moveText {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-145%);
+    }
+}
+
+#loading-screen {
+    /*Display stuff*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*Positioning stuff*/
+    position: fixed;
+    z-index: 9999;
+    /*Box model stuff*/
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    /*Typography stuff*/
+    color: #fff;
+    /*Miscellaneous*/
+    gap: 2rem;
+}
+
+#loading-screen img {
+    /*Box model stuff*/
+    width: 5%;
+}
+
+@keyframes moveCircle {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes appaer {
+    0% {
+        opacity: 0;
+        transform: scale(0.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        scale: 0.8;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+
+}
+
+#content {
+    /*Display stuff*/
+    display: none;
+}
+
+
+/*
+
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/globall.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="assets/img/iconAmbarColor.svg" type="image/x-icon">
+    <title>| Projeto Ambar</title>
+</head>
+
+<body>
+    <div class="cr1"></div>
+    <div class="cr2"></div>
+    <div class="cr3"></div>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="blurLoad">
+            <img src="/assets/icons/download.gif" alt="">
+        </div>
+        <div class="cr1"></div>
+        <div class="cr2"></div>
+    </div>
+
+
+    <div class="backgound_blur">
+        <div class="blur">
+
+        </div>
+    </div>
+  
+    <div class="container">
+        <header>
+            <div class="head_left">
+                <img src="assets/icons/iconAmbarColor.svg" alt="">
+                <div class="logotipo">
+                    <img src="assets/icons/iconA.svg" alt="">
+                    <span>mbar</span>
+                </div>
+            </div>
+            <div class="head_right">
+                <a>
+                    <img src="assets/icons/bandeira.svg" alt="">
+                    <p>br</p>
+                </a>
+            </div>
+        </header>
+
+        <section class="autoBlur sec_default initial_sec">
+            <div class="title">
+                <div class="text_icon">
+                    <div class="iconeA">
+                        <img src="assets/icons/iconA.svg" alt="">
+                    </div>
+                    <div class="text">
+                        <h1>Ambar.C0de</h1>
+                    </div>
+                </div>
+                <div class="made_by">
+                    Feito por <img src="assets/icons/iconAmbarColor.svg" alt=""><span> Ambar</span> 
+                </div>
+            </div>
+            
+            <div class="background-text">
+                <div class="textBack">Q1w2e3R4! A7b8C9d0# XyZ1@2w3$ LmN4%5o6^ P5hsw1T0&<br> JkL7*8m9( QwErTyUi) AsDfGhJk_ ZxCvBnM1+ R8t7y6U5!<br> V4b3n2M1# WqErTyUi$ OpAsDfGh% LkJ9h8G7^ FdSaQwEr&<br> TzXcVbNm( UiOpAsDf_ GhJkLmNo+</div>
+                <div class="textBack">Q1w2e3R4! A7b8C9d0# XyZ1@2w3$ LmN4%5o6^ P5hsw1T0&<br> JkL7*8m9( QwErTyUi) AsDfGhJk_ ZxCvBnM1+ R8t7y6U5!<br> V4b3n2M1# WqErTyUi$ OpAsDfGh% LkJ9h8G7^ FdSaQwEr&<br> TzXcVbNm( UiOpAsDf_ GhJkLmNo+</div>
+                <div class="textBack">Q1w2e3R4! A7b8C9d0# XyZ1@2w3$ LmN4%5o6^ P5hsw1T0&<br> JkL7*8m9( QwErTyUi) AsDfGhJk_ ZxCvBnM1+ R8t7y6U5!<br> V4b3n2M1# WqErTyUi$ OpAsDfGh% LkJ9h8G7^ FdSaQwEr&<br> TzXcVbNm( UiOpAsDf_ GhJkLmNo+</div>
+                <div class="textBack">Q1w2e3R4! A7b8C9d0# XyZ1@2w3$ LmN4%5o6^ P5hsw1T0&<br> JkL7*8m9( QwErTyUi) AsDfGhJk_ ZxCvBnM1+ R8t7y6U5!<br> V4b3n2M1# WqErTyUi$ OpAsDfGh% LkJ9h8G7^ FdSaQwEr&<br> TzXcVbNm( UiOpAsDf_ GhJkLmNo+</div>
+                <div class="textBack">Q1w2e3R4! A7b8C9d0# XyZ1@2w3$ LmN4%5o6^ P5hsw1T0&<br> JkL7*8m9( QwErTyUi) AsDfGhJk_ ZxCvBnM1+ R8t7y6U5!<br> V4b3n2M1# WqErTyUi$ OpAsDfGh% LkJ9h8G7^ FdSaQwEr&<br> TzXcVbNm( UiOpAsDf_ GhJkLmNo+</div>
+                <div class="textBack">Q1w2e3R4! A7b8C9d0# XyZ1@2w3$ LmN4%5o6^ P5hsw1T0&<br> JkL7*8m9( QwErTyUi) AsDfGhJk_ ZxCvBnM1+ R8t7y6U5!<br> V4b3n2M1# WqErTyUi$ OpAsDfGh% LkJ9h8G7^ FdSaQwEr&<br> TzXcVbNm( UiOpAsDf_ GhJkLmNo+</div>
+                <div class="textBack">Q1w2e3R4! A7b8C9d0# XyZ1@2w3$ LmN4%5o6^ P5hsw1T0&<br> JkL7*8m9( QwErTyUi) AsDfGhJk_ ZxCvBnM1+ R8t7y6U5!<br> V4b3n2M1# WqErTyUi$ OpAsDfGh% LkJ9h8G7^ FdSaQwEr&<br> TzXcVbNm( UiOpAsDf_ GhJkLmNo+</div>
+                <div class="textBack">Q1w2e3R4! A7b8C9d0# XyZ1@2w3$ LmN4%5o6^ P5hsw1T0&<br> JkL7*8m9( QwErTyUi) AsDfGhJk_ ZxCvBnM1+ R8t7y6U5!<br> V4b3n2M1# WqErTyUi$ OpAsDfGh% LkJ9h8G7^ FdSaQwEr&<br> TzXcVbNm( UiOpAsDf_ GhJkLmNo+</div>
+            </div>
+            
+        </section>
+        <section class="autoBlur sec_default secundary_sec">
+            <div class="retangulo">
+                <p>
+                    Você ja se Sentiu<br> <span>Perdido</span><br> no mercado de programação?
+                </p>
+            </div>
+            
+            <div class="background-text">
+                <div class="textBack">Q1w2e3R4! A7b8C9d0# XyZ1@2w3$ LmN4%5o6^ P5hsw1T0&<br> JkL7*8m9( QwErTyUi) AsDfGhJk_ ZxCvBnM1+ R8t7y6U5!<br> V4b3n2M1# WqErTyUi$ OpAsDfGh% LkJ9h8G7^ FdSaQwEr&<br> TzXcVbNm( UiOpAsDf_ GhJkLmNo+</div>
+                <div class="textBack">Q1w2e3R4! A7b8C9d0# XyZ1@2w3$ LmN4%5o6^ P5hsw1T0&<br> JkL7*8m9( QwErTyUi) AsDfGhJk_ ZxCvBnM1+ R8t7y6U5!<br> V4b3n2M1# WqErTyUi$ OpAsDfGh% LkJ9h8G7^ FdSaQwEr&<br> TzXcVbNm( UiOpAsDf_ GhJkLmNo+</div>
+                <div class="textBack">Q1w2e3R4! A7b8C9d0# XyZ1@2w3$ LmN4%5o6^ P5hsw1T0&<br> JkL7*8m9( QwErTyUi) AsDfGhJk_ ZxCvBnM1+ R8t7y6U5!<br> V4b3n2M1# WqErTyUi$ OpAsDfGh% LkJ9h8G7^ FdSaQwEr&<br> TzXcVbNm( UiOpAsDf_ GhJkLmNo+</div>
+                <div class="textBack">Q1w2e3R4! A7b8C9d0# XyZ1@2w3$ LmN4%5o6^ P5hsw1T0&<br> JkL7*8m9( QwErTyUi) AsDfGhJk_ ZxCvBnM1+ R8t7y6U5!<br> V4b3n2M1# WqErTyUi$ OpAsDfGh% LkJ9h8G7^ FdSaQwEr&<br> TzXcVbNm( UiOpAsDf_ GhJkLmNo+</div>
+                <div class="textBack">Q1w2e3R4! A7b8C9d0# XyZ1@2w3$ LmN4%5o6^ P5hsw1T0&<br> JkL7*8m9( QwErTyUi) AsDfGhJk_ ZxCvBnM1+ R8t7y6U5!<br> V4b3n2M1# WqErTyUi$ OpAsDfGh% LkJ9h8G7^ FdSaQwEr&<br> TzXcVbNm( UiOpAsDf_ GhJkLmNo+</div>
+                <div class="textBack">Q1w2e3R4! A7b8C9d0# XyZ1@2w3$ LmN4%5o6^ P5hsw1T0&<br> JkL7*8m9( QwErTyUi) AsDfGhJk_ ZxCvBnM1+ R8t7y6U5!<br> V4b3n2M1# WqErTyUi$ OpAsDfGh% LkJ9h8G7^ FdSaQwEr&<br> TzXcVbNm( UiOpAsDf_ GhJkLmNo+</div>
+                <div class="textBack">Q1w2e3R4! A7b8C9d0# XyZ1@2w3$ LmN4%5o6^ P5hsw1T0&<br> JkL7*8m9( QwErTyUi) AsDfGhJk_ ZxCvBnM1+ R8t7y6U5!<br> V4b3n2M1# WqErTyUi$ OpAsDfGh% LkJ9h8G7^ FdSaQwEr&<br> TzXcVbNm( UiOpAsDf_ GhJkLmNo+</div>
+                <div class="textBack">Q1w2e3R4! A7b8C9d0# XyZ1@2w3$ LmN4%5o6^ P5hsw1T0&<br> JkL7*8m9( QwErTyUi) AsDfGhJk_ ZxCvBnM1+ R8t7y6U5!<br> V4b3n2M1# WqErTyUi$ OpAsDfGh% LkJ9h8G7^ FdSaQwEr&<br> TzXcVbNm( UiOpAsDf_ GhJkLmNo+</div>
+            </div>
+        </section>
+        <section class="autoBlur pity_sec">
+            <div class="logoBack">
+                <img src="assets/img/logoBack.svg" alt="">
+                <img src="assets/img/logoBack.svg" alt="">
+            </div>
+            
+            <img src="assets/icons/logoName.svg" alt="">
+            <div class="autoBlur textContainer">
+                <h1>Diversas <span>linguagens</span>, diversas
+                    <span>tecnologias</span>… Mas alguma já te
+                    <span>entregou</span> o que estamos prestes a
+                    te <span>oferecer</span>?</h1>
+            </div>
+
+            <div class="image_box autoVideoFull">
+                <video autoplay id="meu-video" loop>
+                    <source src="assets/img/large.mp4" type="video/mp4">
+                </video>
+                <div class="controls">
+                    <button id="botao-pause-play">
+                        <i id="icone" class="fa fa-play"></i> <!-- Usa um ícone da Font Awesome -->
+                    </button> 
+                    <button id="botao-tela-cheia">
+                        <i class="fa fa-expand"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="autoBlur sec_default dowload_sec">
+            <div class="down_content">
+                <div class="down_text">
+                    <h1>Ambar.C0de</h1>
+                    <p>Simplificando o ensino da programação de forma intuitiva, com uma linguagem acessivel e multiplataforma.</p>
+                </div> 
+                <a href="#" class="dowload_btn">
+                    <button>Baixar</button>
+                </a>
+            </div>
+            <div class="background-text">
+                <div class="textBack">Q1w2e3R4! A7b8C9d0# XyZ1@2w3$ LmN4%5o6^ P5hsw1T0&<br> JkL7*8m9( QwErTyUi) AsDfGhJk_ ZxCvBnM1+ R8t7y6U5!<br> V4b3n2M1# WqErTyUi$ OpAsDfGh% LkJ9h8G7^ FdSaQwEr&<br> TzXcVbNm( UiOpAsDf_ GhJkLmNo+</div>
+                <div class="textBack">Q1w2e3R4! A7b8C9d0# XyZ1@2w3$ LmN4%5o6^ P5hsw1T0&<br> JkL7*8m9( QwErTyUi) AsDfGhJk_ ZxCvBnM1+ R8t7y6U5!<br> V4b3n2M1# WqErTyUi$ OpAsDfGh% LkJ9h8G7^ FdSaQwEr&<br> TzXcVbNm( UiOpAsDf_ GhJkLmNo+</div>
+                <div class="textBack">Q1w2e3R4! A7b8C9d0# XyZ1@2w3$ LmN4%5o6^ P5hsw1T0&<br> JkL7*8m9( QwErTyUi) AsDfGhJk_ ZxCvBnM1+ R8t7y6U5!<br> V4b3n2M1# WqErTyUi$ OpAsDfGh% LkJ9h8G7^ FdSaQwEr&<br> TzXcVbNm( UiOpAsDf_ GhJkLmNo+</div>
+                <div class="textBack">Q1w2e3R4! A7b8C9d0# XyZ1@2w3$ LmN4%5o6^ P5hsw1T0&<br> JkL7*8m9( QwErTyUi) AsDfGhJk_ ZxCvBnM1+ R8t7y6U5!<br> V4b3n2M1# WqErTyUi$ OpAsDfGh% LkJ9h8G7^ FdSaQwEr&<br> TzXcVbNm( UiOpAsDf_ GhJkLmNo+</div>
+                <div class="textBack">Q1w2e3R4! A7b8C9d0# XyZ1@2w3$ LmN4%5o6^ P5hsw1T0&<br> JkL7*8m9( QwErTyUi) AsDfGhJk_ ZxCvBnM1+ R8t7y6U5!<br> V4b3n2M1# WqErTyUi$ OpAsDfGh% LkJ9h8G7^ FdSaQwEr&<br> TzXcVbNm( UiOpAsDf_ GhJkLmNo+</div>
+                <div class="textBack">Q1w2e3R4! A7b8C9d0# XyZ1@2w3$ LmN4%5o6^ P5hsw1T0&<br> JkL7*8m9( QwErTyUi) AsDfGhJk_ ZxCvBnM1+ R8t7y6U5!<br> V4b3n2M1# WqErTyUi$ OpAsDfGh% LkJ9h8G7^ FdSaQwEr&<br> TzXcVbNm( UiOpAsDf_ GhJkLmNo+</div>
+                <div class="textBack">Q1w2e3R4! A7b8C9d0# XyZ1@2w3$ LmN4%5o6^ P5hsw1T0&<br> JkL7*8m9( QwErTyUi) AsDfGhJk_ ZxCvBnM1+ R8t7y6U5!<br> V4b3n2M1# WqErTyUi$ OpAsDfGh% LkJ9h8G7^ FdSaQwEr&<br> TzXcVbNm( UiOpAsDf_ GhJkLmNo+</div>
+                <div class="textBack">Q1w2e3R4! A7b8C9d0# XyZ1@2w3$ LmN4%5o6^ P5hsw1T0&<br> JkL7*8m9( QwErTyUi) AsDfGhJk_ ZxCvBnM1+ R8t7y6U5!<br> V4b3n2M1# WqErTyUi$ OpAsDfGh% LkJ9h8G7^ FdSaQwEr&<br> TzXcVbNm( UiOpAsDf_ GhJkLmNo+</div>
+            </div>
+        </section>
+    </div>
+  
+    <script src="main.js"></script>
+</body>
+
+</html>
