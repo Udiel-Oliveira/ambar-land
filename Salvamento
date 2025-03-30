@@ -752,7 +752,7 @@ header {
 
 }
 
-#content {
+#content { 
     /*Display stuff*/
     display: none;
 }

@@ -566,7 +566,7 @@ header {
     border: 2px solid #FFBD2E;
 }
 .window_control:nth-child(2){
-    background-color: transparent;
+    background-color: transparent; 
     border: 2px solid #27C93F;
 }
 .window_control:nth-child(3){
