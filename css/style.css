@@ -756,7 +756,7 @@ header {
     text-decoration: none;
     background-color: transparent;
     padding: 5px 5px;
-    border: 1px solid #CE7B1D;
+    border: 1px solid #fff;
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
 }
@@ -765,9 +765,9 @@ header {
     font-size: 1rem;
     font-weight: bold;
     font-family: "Audiowide", sans-serif;
-    color: #fff;
+    color: #000;
     opacity: 1;
-    background-color: #CE7B1D;
+    background-color: #ffff;
     border: none;
     padding: 10px 50px;
     cursor: pointer;
@@ -775,11 +775,11 @@ header {
     transition: all 0.3s ease-in-out;
 }
 .dowload_btn button:hover {
-    background: #fff;
-    color: #000;
+    background: #CE7B1D;
+    color: #fff;
 }
 .dowload_btn:hover {
-    border-color: #fff;
+    border-color: #CE7B1D;
 }
 /* <=========== Footer ===========>*/
 
@@ -826,7 +826,7 @@ header {
 }
 
 .nav-section a:hover {
-    color: #ddd; /* Muda para cinza claro ao passar o mouse */
+    color: #97621F; 
 }
 
 .footer-bottom {
