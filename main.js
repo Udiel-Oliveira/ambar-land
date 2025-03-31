@@ -7,7 +7,7 @@ window.addEventListener('load', function() {
     setTimeout(function() {
         loadingScreen.style.display = 'none';
         content.style.display = 'block';
-    }, 30);
+    }, 3000);
 }); 
 
 const video = document.getElementById("meu-video");
