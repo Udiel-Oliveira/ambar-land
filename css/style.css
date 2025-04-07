@@ -259,9 +259,10 @@ header {
     font-family: "Inter", sans-serif;
     /*Manipulations stuff*/
     animation: fadeIn 3s ease-in-out forwards;
-    animation-delay: 7s;
+    animation-delay: 4s;
     opacity: 0;
     /*Miscellaneous*/
+    padding-top: 20px;
     gap: 8px;
 }
 
